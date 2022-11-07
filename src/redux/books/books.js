@@ -1,5 +1,26 @@
 const initState = {
-  books: [],
+  books: [
+    {
+      id: '1',
+      title: 'House of Dragons',
+      author: 'George R. R. Martin',
+    },
+    {
+      id: '2',
+      title: 'Merlin',
+      author: 'J.J Okocha',
+    },
+    {
+      id: '3',
+      title: 'Harry Potter',
+      author: 'J.K. Rowling',
+    },
+    {
+      id: '4',
+      title: 'Rings of Fire',
+      author: 'Astro Yoshi',
+    },
+  ],
 };
 
 // Actions
