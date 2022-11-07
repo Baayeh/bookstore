@@ -7,8 +7,8 @@ const Categories = () => {
   const dispatch = useDispatch();
 
   const statusCheck = () => {
-    const value = dispatch(checkStatus()).payload;
-    setStatus(value);
+    const { payload } = dispatch(checkStatus());
+    setStatus(payload);
   };
 
   return (
