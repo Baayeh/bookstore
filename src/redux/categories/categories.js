@@ -3,17 +3,17 @@ const initState = {
 };
 
 // Actions
-const STATUS = 'bookstore/categories/STATUS';
+const CHECKED_STATUS = 'bookstore/categories/CHECKED_STATUS';
 
 // Action creators
 const checkStatus = () => ({
-  type: STATUS,
+  type: CHECKED_STATUS,
   payload: 'Under construction',
 });
 
 const reducer = (state = initState, action) => {
   switch (action.type) {
-    case STATUS:
+    case CHECKED_STATUS:
       return action.payload;
     default:
       return state;

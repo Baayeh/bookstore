@@ -3,29 +3,29 @@ const initState = {
 };
 
 // Actions
-const ADD = 'bookstore/books/ADD';
-const REMOVE = 'bookstore/books/REMOVE';
+const ADDED_BOOK = 'bookstore/books/ADDED_BOOK';
+const REMOVED_BOOK = 'bookstore/books/REMOVED_BOOK';
 
 // Action creators
 const addBook = (book) => ({
-  type: ADD,
+  type: ADDED_BOOK,
   book,
 });
 
 const removeBook = (id) => ({
-  type: REMOVE,
+  type: REMOVED_BOOK,
   id,
 });
 
 // Reducer
 const reducer = (state = initState, action) => {
   switch (action.type) {
-    case ADD:
+    case ADDED_BOOK:
       return {
         ...state,
         books: [...state.books, action.book],
       };
-    case REMOVE:
+    case REMOVED_BOOK:
       return {
         ...state,
         books: state.books.filter((todo) => todo.id !== action.id),
