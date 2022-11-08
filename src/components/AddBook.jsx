@@ -1,22 +1,30 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
-import { addBook } from '../redux/books/books';
+import { addBook } from '../redux/books/bookSlice';
 
 const AddBook = () => {
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
   const dispatch = useDispatch();
 
-  const AddBook = () => {
-    const book = {
-      id: uuidv4(),
-      title,
-      author,
-    };
-    dispatch(addBook(book));
-    setTitle('');
-    setAuthor('');
+  const scrollToTop = () => {
+    window.scrollTo(0, 0);
+  };
+
+  const addABook = () => {
+    if (title !== '' && author !== '') {
+      const book = {
+        item_id: uuidv4(),
+        title,
+        author,
+        category: 'Sci-fi',
+      };
+      dispatch(addBook(book));
+      scrollToTop();
+      setTitle('');
+      setAuthor('');
+    }
   };
 
   return (
@@ -30,6 +38,7 @@ const AddBook = () => {
             placeholder="Book title"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
+            required
           />
           <input
             type="text"
@@ -37,13 +46,14 @@ const AddBook = () => {
             placeholder="Author"
             value={author}
             onChange={(e) => setAuthor(e.target.value)}
+            required
           />
         </div>
         <div className="form-action">
           <button
             type="button"
             className="uppercase bg-blue-600 text-white p-2 rounded md:w-[9rem]"
-            onClick={AddBook}
+            onClick={addABook}
           >
             Add Book
           </button>
