@@ -12,7 +12,7 @@ const Book = ({ book }) => {
 
   return (
     <div className="book-card border bg-white p-3 shadow rounded">
-      <small>Category</small>
+      <small>{book.category}</small>
       <h2 className="title text-blue-900 font-extrabold text-xl">
         {book.title}
       </h2>
@@ -33,6 +33,7 @@ Book.propTypes = {
     item_id: PropTypes.string,
     title: PropTypes.string,
     author: PropTypes.string,
+    category: PropTypes.string,
   }).isRequired,
 };
 
