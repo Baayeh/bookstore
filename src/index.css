@@ -3,6 +3,8 @@
 @import 'primereact/resources/primereact.min.css';
 @import 'primeicons/primeicons.css';
 
+@import 'react-circular-progressbar/dist/styles.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -21,5 +23,22 @@
 @layer components {
   .active {
     @apply font-bold;
+  }
+
+  @keyframes p-progress-spinner-color {
+    100%,
+    0% {
+      stroke: #fff;
+    }
+    40% {
+      stroke: #fff;
+    }
+    66% {
+      stroke: #fff;
+    }
+    80%,
+    90% {
+      stroke: #fff;
+    }
   }
 }
