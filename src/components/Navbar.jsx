@@ -11,13 +11,13 @@ const Navbar = () => (
       <div className="nav-links hidden md:flex md:gap-5">
         <NavLink
           to="/"
-          className={`uppercase ${(isActive) => (isActive ? 'active' : '')}`}
+          className={`uppercase text-[0.813rem] tracking-[1.9px] ${(isActive) => (isActive ? 'active' : '')}`}
         >
           Books
         </NavLink>
         <NavLink
           to="/categories"
-          className={`uppercase ${(isActive) => (isActive ? 'active' : '')}`}
+          className={`uppercase text-[0.813rem] tracking-[1.9px] ${(isActive) => (isActive ? 'active' : '')}`}
         >
           Categories
         </NavLink>
