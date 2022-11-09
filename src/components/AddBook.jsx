@@ -45,13 +45,13 @@ const AddBook = ({ entity, toast }) => {
   }, [entity.msg]);
 
   return (
-    <section id="form-section" className="mt-10 border-t-2 pt-5">
-      <h3 className="text-2xl font-bold">Add New Book</h3>
+    <section id="form-section" className="mb-10">
+      <h3 className="add-book-title">Add New Book</h3>
       <form className="">
-        <div className="form-control grid md:grid-cols-3 lg:grid-cols-4 gap-x-5 gap-y-5">
+        <div className="form-control flex items-center flex-wrap gap-8 md:gap-7">
           <input
             type="text"
-            className="p-3 md:p-2 border focus:outline-none col-span-1"
+            className="add-input-field"
             placeholder="Book title"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
@@ -59,7 +59,7 @@ const AddBook = ({ entity, toast }) => {
           />
           <input
             type="text"
-            className="p-3 md:p-2 border focus:outline-none"
+            className="add-input-field"
             placeholder="Author"
             value={author}
             onChange={(e) => setAuthor(e.target.value)}
@@ -68,7 +68,7 @@ const AddBook = ({ entity, toast }) => {
           <select
             name="category"
             id="category"
-            className="p-3 md:p-2 border focus:outline-none"
+            className="select-input"
             value={category}
             onChange={selectCategory}
           >
@@ -78,11 +78,7 @@ const AddBook = ({ entity, toast }) => {
 
           <div className="form-action">
             {status && (
-              <button
-                type="button"
-                className="uppercase bg-blue-600 text-white p-2 rounded md:w-[9rem]"
-                onClick={addABook}
-              >
+              <button type="button" className="add-btn hover:bg-[#2b6ea9]" onClick={addABook}>
                 Add Book
               </button>
             )}

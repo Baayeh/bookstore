@@ -33,54 +33,49 @@ const Book = ({ book }) => {
   return (
     <div className="book-card border bg-white p-8 shadow-sm rounded flex items-center justify-between">
       <div>
-        <p className="text-gray-400 font-bold">{book.category}</p>
-        <h1 className="title text-slate-700 font-extrabold text-2xl">
-          {book.title}
-        </h1>
-        <p className="author text-blue-700 font-light text-lg">{book.author}</p>
+        <p className="category-name">{book.category}</p>
+        <h1 className="title">{book.title}</h1>
+        <p className="author">{book.author}</p>
         <div className="actions mt-5">
-          <button
-            type="button"
-            className="pr-2 text-blue-700 text-sm hover:text-blue-900"
-          >
+          <button type="button" className="book-btn">
             Comments
           </button>
           <button
             type="button"
-            className="px-2 text-blue-700 border-l-2 border-r-2 text-sm hover:text-blue-900"
+            className="book-btn px-3 border-l-2 border-r-2"
             onClick={deleteBook}
           >
             Remove
           </button>
           <button
             type="button"
-            className="px-2 text-blue-700 text-sm hover:text-blue-900"
+            className="book-btn"
           >
             Edit
           </button>
         </div>
       </div>
 
-      <div className="md:flex gap-16 hidden">
+      <div className="md:flex gap-24 hidden pr-[7rem]">
         <div className="flex items-center gap-4">
-          <div className="w-20 h-20">
+          <div className="w-[4.25rem] h-[4.25rem]">
             <CircularProgressbar value={percent} />
           </div>
           <div className="flex flex-col items-center text-gray-400">
-            <p className="text-2xl">
+            <p className="text-[2rem] text-[#121212]">
               {percent}
               %
             </p>
-            <span>completed</span>
+            <span className="text-[0.875rem] text-[#121212] opacity-[0.5]">completed</span>
           </div>
         </div>
 
-        <div className="border-l-2 pl-10">
-          <p className="uppercase font-light text-gray-500">Current Chapter</p>
-          <h3>Chapter 3: A Lesson Learned</h3>
+        <div className="border-l-2 border-[#e8e8e8] pl-20">
+          <p className="uppercase text-[0.813rem] text-[#121212] opacity-[0.5] font-[300]">Current Chapter</p>
+          <h3 className="text-[1rem] tracking-[-0.4px] text-[#121212] mt-[0.438rem]">Chapter 3: A Lesson Learned</h3>
           <button
             type="button"
-            className="px-4 py-2 bg-blue-500 text-white rounded text-sm mt-5 uppercase"
+            className="px-4 py-2 bg-[#0290ff] text-white rounded-[3px] text-[0.813rem] font-[300] tracking-[0.5px] mt-[0.95rem] w-[11.5rem] uppercase hover:bg-[#2b6ea9]"
           >
             Update Progress
           </button>

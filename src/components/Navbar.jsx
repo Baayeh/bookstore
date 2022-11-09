@@ -5,7 +5,7 @@ import { CiUser } from 'react-icons/ci';
 const Navbar = () => (
   <nav className="p-3 md:px-16 md:py-5 bg-white border-b flex justify-between items-center">
     <div className="flex items-center gap-5">
-      <Link to="/" className="logo text-blue-600 font-bold text-xl">
+      <Link to="/" className="logo text-[1.875rem]">
         BookStore CMS
       </Link>
       <div className="nav-links hidden md:flex md:gap-5">

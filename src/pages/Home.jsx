@@ -1,3 +1,4 @@
+/* eslint-disable react/self-closing-comp */
 import { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import Swal from 'sweetalert2';
@@ -75,6 +76,7 @@ const Home = () => {
           ? entity.books.map((book) => <Book key={book.item_id} book={book} />)
           : null}
       </div>
+      <div className="divider"></div>
       <AddBook toast={Toast} entity={entity} />
     </section>
   );
