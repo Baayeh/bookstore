@@ -104,4 +104,5 @@ AddBook.propTypes = {
   entity: PropTypes.shape().isRequired,
   toast: PropTypes.func.isRequired,
 };
+
 export default AddBook;
