@@ -15,7 +15,7 @@ BookStore App is an application that displays a list of books and allows you to:
 
 ## Live Demo
 
-> (Bookstore)[https://bookstore-iota-six.vercel.app/]
+> [Bookstore](https://bookstore-iota-six.vercel.app/)
 
 ## Getting Started
 
